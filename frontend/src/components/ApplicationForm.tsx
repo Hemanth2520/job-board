@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import { submitApplication } from '../services/api';
 
 const ApplicationForm = ({ jobId, jobTitle, company }: { jobId: string; jobTitle: string; company: string }) => {
