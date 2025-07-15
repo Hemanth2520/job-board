@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const API = axios.create({
-  baseURL: 'http://localhost:5000',
+  baseURL: 'https://job-board-4ewq.onrender.com/',
 });
 
 export const getJobs = async () => {
