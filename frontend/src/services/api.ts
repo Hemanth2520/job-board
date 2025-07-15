@@ -18,3 +18,5 @@ export const submitApplication = async (applicationData: any) => {
   const res = await API.post('/applications', applicationData);
   return res.data;
 };
+
+
