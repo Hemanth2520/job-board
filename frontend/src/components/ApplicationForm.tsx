@@ -10,7 +10,10 @@ const ApplicationForm = ({ jobId, jobTitle, company }: { jobId: string; jobTitle
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    submitApplication({ ...formData, job_id: jobId }).then(() => alert('Application submitted!'));
+    submitApplication({ ...formData, job_id: jobId }).then(() => {
+      alert('Application submitted!');
+      setFormData({ name: '', email: '', resume_link: '', cover_letter: '' });
+    });
   };
 
   return (
@@ -22,6 +25,7 @@ const ApplicationForm = ({ jobId, jobTitle, company }: { jobId: string; jobTitle
           name="name"
           placeholder="Full Name"
           className="w-full border px-4 py-2 rounded"
+          value={formData.name}
           onChange={handleChange}
           required
         />
@@ -30,6 +34,7 @@ const ApplicationForm = ({ jobId, jobTitle, company }: { jobId: string; jobTitle
           placeholder="Email Address"
           type="email"
           className="w-full border px-4 py-2 rounded"
+          value={formData.email}
           onChange={handleChange}
           required
         />
@@ -37,6 +42,7 @@ const ApplicationForm = ({ jobId, jobTitle, company }: { jobId: string; jobTitle
           name="resume_link"
           placeholder="Resume URL"
           className="w-full border px-4 py-2 rounded"
+          value={formData.resume_link}
           onChange={handleChange}
           required
         />
@@ -44,6 +50,7 @@ const ApplicationForm = ({ jobId, jobTitle, company }: { jobId: string; jobTitle
           name="cover_letter"
           placeholder="Cover Letter"
           className="w-full border px-4 py-2 rounded h-32"
+          value={formData.cover_letter}
           onChange={handleChange}
           required
         ></textarea>
