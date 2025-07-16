@@ -4,7 +4,7 @@
   "description": "Backend API for Job Board application",
   "main": "dist/server.js",
   "scripts": {
-    "start": "node dist/server.js",
+    "start": "server.js",
     "dev": "nodemon src/server.ts",
     "build": "tsc",
     "seed": "node seed/seed.js",

@@ -15,7 +15,7 @@ connectDB();
 app.use(cors());
 app.use(express.json());
 
-app.use('/jobs', jobRoutes);
+app.use('/', jobRoutes);
 app.use('/applications', applicationRoutes);
 
 const PORT = process.env.PORT || 5000;
